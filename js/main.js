@@ -1,20 +1,14 @@
 var header = $('h2');
-var txt = $('.article-content');
 
-function prepareEventHandler(event) {
+function classToggleEventHandler(event) {
     var target = $(event.target);
-    txt.addClass('hidden');
     if (target.is('h2')) {
-        target.next().removeClass('hidden');
-    }  
+        header.parent()
+            .find('.article-content')
+            .toggleClass('hidden');
+        console.log(target);
+    }
 }
 
-function registerClickEventHandler() { 
-    header.click(prepareEventHandler);
-}
+header.click(classToggleEventHandler);
 
-function main() {
-    registerClickEventHandler();
-}
-
-$(document).ready(main);

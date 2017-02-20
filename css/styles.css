@@ -23,7 +23,7 @@ article {
     margin-bottom: 20px;   
 }
 
-article h2 {
+article h2 { 
     margin: 0 auto;
     text-align: center;
     padding-top: 9px;
@@ -35,7 +35,7 @@ article h2 {
 /*    display: none;*/
 }
 
-.hidden {
+.hidden {         
     display: none;
 }
 
