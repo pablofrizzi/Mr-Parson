@@ -4,9 +4,15 @@ function classToggleEventHandler(event) {
         target.parent()
             .find('.article-content')
             .toggleClass('hidden');
-        console.log(target);
     }
 }
 
-$('.text-box-container').click(classToggleEventHandler);
+function clickEventHandler() {
+    $('.text-box-container').click(classToggleEventHandler);
+}
 
+function main() {
+    clickEventHandler();
+}
+
+$(document).ready(main);
