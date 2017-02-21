@@ -1,21 +1,21 @@
-function classToggleEventHandler(event) {
+function clickEventHandler(event) {
     var target = $(event.target);
+    var content;
+    var contentLength;
     if (target.is('h2')) {
-        target.parent()
-            .find('.article-content')
-            .slideToggle(500)
-            .toggleClass('hidden');
+        content = target.parent().find('.article-content');
+        contentLength = content.text().length;
+        content.slideToggle(contentLength);
+        content.toggleClass('hidden');
     }
 }
 
-function clickEventHandler() {
-    $('.text-box-container').click(classToggleEventHandler);
+function registerEventHandler() {
+    $('.text-box-container').on('click', clickEventHandler);                       
 }
 
 function main() {
-    clickEventHandler();
+    registerEventHandler();
 }
 
 $(document).ready(main);
-
-
