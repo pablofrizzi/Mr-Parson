@@ -3,6 +3,7 @@ function classToggleEventHandler(event) {
     if (target.is('h2')) {
         target.parent()
             .find('.article-content')
+            .slideToggle(500)
             .toggleClass('hidden');
     }
 }
@@ -16,3 +17,5 @@ function main() {
 }
 
 $(document).ready(main);
+
+
