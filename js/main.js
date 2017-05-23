@@ -6,7 +6,7 @@ function clickEventHandler(event) {
         content = target.parent().find('.article-content');
         contentLength = content.text().length;
         content.slideToggle(contentLength);
-        content.toggleClass('hidden');
+        content.toggleClass('hidden');   
     }
 }
 
